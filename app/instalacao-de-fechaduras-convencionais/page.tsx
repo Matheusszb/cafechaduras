@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/service-page";
-export const metadata:Metadata={title:"Instalação de fechaduras convencionais em Blumenau",description:"Instalação e substituição de fechaduras convencionais em Blumenau para portas residenciais e comerciais. Solicite avaliação.",alternates:{canonical:"/instalacao-de-fechaduras-convencionais"}};
+import { pageMetadata } from "@/lib/site";
+export const metadata:Metadata=pageMetadata("Fechaduras convencionais em Blumenau e região","Instalação e substituição de fechaduras convencionais em Blumenau, Indaial, Gaspar e Pomerode, SC. Solicite uma avaliação.","/instalacao-de-fechaduras-convencionais");
 export default function Page(){return <ServicePage label="Instalação de fechaduras convencionais" title="Instalação de fechaduras convencionais" intro="Soluções mecânicas para portas residenciais e comerciais, com cuidado no alinhamento, funcionamento e acabamento." image="/media/ca-logo.png" alt="Marca CA Instalação de Fechadura" points={["Avaliação da porta e da fechadura existente","Definição do tipo de fechadura adequado","Instalação ou substituição conforme a compatibilidade","Conferência do acionamento e do fechamento"]} note="O modelo ideal para seu caso é definido após avaliação da porta e da fechadura existente."/>}

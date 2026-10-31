@@ -19,3 +19,9 @@ pnpm dev
 ```
 
 O build foi verificado com Next.js 16.3.4 e gera todas as páginas, `robots.txt`, `sitemap.xml` e os arquivos de mídia. Para atualizar conteúdo, altere os arquivos em `app/`, `components/` ou `public/media` e publique novamente.
+
+## Área de atendimento e SEO local
+
+O site informa atendimento em Blumenau, Indaial, Gaspar e Pomerode, SC. A página inicial e as páginas de serviço publicam essas cidades em texto visível e nos dados estruturados `Locksmith` e `Service`. O mapa aponta para o único cadastro Google da empresa em Blumenau; o site não declara filiais nas outras cidades.
+
+Depois de publicar, confira se o Perfil da Empresa no Google também lista essas quatro cidades como áreas atendidas. Configure `NEXT_PUBLIC_SITE_URL` com o domínio definitivo para que URLs canônicas, Open Graph, `sitemap.xml` e `robots.txt` usem o endereço certo. Cadastre o domínio e envie o sitemap no Google Search Console.

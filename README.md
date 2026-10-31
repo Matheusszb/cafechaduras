@@ -2,6 +2,8 @@
 
 Esta pasta é um projeto Next.js pronto para publicação na Vercel. O site é estático: não precisa de painel administrativo, banco de dados, API ou serviço de upload. A logo, seis fotos e três vídeos estão em `public/media`.
 
+As imagens exibidas usam versões WebP menores. As fotos JPEG originais permanecem na pasta para referência e prévias de compartilhamento. O logo exibido foi reduzido de 891 KB para 39 KB, as fontes WOFF2 são servidas pelo próprio site e os vídeos da galeria só começam a carregar quando o visitante os abre. O vídeo principal continua em destaque na primeira tela.
+
 ## Publicar
 
 1. Envie **o conteúdo desta pasta** para um repositório Git e importe-o em **Vercel → Add New → Project**. Se o repositório contiver a pasta `ca-vercel` junto com outros arquivos, escolha `ca-vercel` em **Root Directory**.

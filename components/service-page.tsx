@@ -30,7 +30,7 @@ export function ServicePage({ label, title, intro, image, alt, points, note }: P
       <p>Atendimento em Blumenau, Indaial, Gaspar e Pomerode. <a href="/#areas-atendidas">Veja as cidades atendidas ↗</a></p>
       <a className="btn btn-gold" href={quoteLink(`Olá! Gostaria de solicitar um orçamento para ${label.toLowerCase()}. Minha cidade e bairro são: `)} target="_blank" rel="noopener noreferrer">Solicitar orçamento <span>↗</span></a>
     </div></section>
-    <section className="content-section"><div className="wrap content-grid"><img src={image} alt={alt}/><div>
+    <section className="content-section"><div className="wrap content-grid"><img src={image} alt={alt} loading="lazy" decoding="async"/><div>
       <div className="eyebrow">COMO FUNCIONA</div>
       <h2>Uma instalação feita para a sua porta.</h2>
       <p>O primeiro passo é conhecer o tipo de porta, a fechadura existente e a solução desejada. Com essas informações, a CA orienta sobre a compatibilidade e os próximos passos.</p>

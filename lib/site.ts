@@ -31,10 +31,10 @@ export function quoteLink(message = "Olá! Gostaria de solicitar um orçamento p
   return `${whatsapp}?text=${encodeURIComponent(message)}`;
 }
 export const demoItems = [
-  { image: "/media/fechadura-digital-virtok.jpg", title: "Fechadura digital em porta de madeira", note: "Referência visual de instalação · modelo a confirmar" },
-  { image: "/media/fechadura-digital-porta-madeira.jpg", title: "Fechadura digital com maçaneta", note: "Referência visual de instalação · modelo a confirmar" },
-  { image: "/media/fechadura-digital-teclado.jpg", title: "Fechadura digital com teclado", note: "Referência visual de instalação · modelo a confirmar" },
-  { image: "/media/fechadura-digital-porta-branca.jpg", title: "Fechadura digital em porta branca", note: "Referência visual · modelo a confirmar" },
-  { image: "/media/fechadura-digital-porta-amadeirada.jpg", title: "Fechadura digital em porta amadeirada", note: "Referência visual · modelo a confirmar" },
-  { image: "/media/fechadura-intelbras-fr101.jpg", title: "Detalhe de fechadura eletrônica", note: "Referência visual · compatibilidade a avaliar" },
+  { image: "/media/fechadura-digital-virtok.webp", title: "Fechadura digital em porta de madeira", note: "Referência visual de instalação · modelo a confirmar" },
+  { image: "/media/fechadura-digital-porta-madeira.webp", title: "Fechadura digital com maçaneta", note: "Referência visual de instalação · modelo a confirmar" },
+  { image: "/media/fechadura-digital-teclado.webp", title: "Fechadura digital com teclado", note: "Referência visual de instalação · modelo a confirmar" },
+  { image: "/media/fechadura-digital-porta-branca.webp", title: "Fechadura digital em porta branca", note: "Referência visual · modelo a confirmar" },
+  { image: "/media/fechadura-digital-porta-amadeirada.webp", title: "Fechadura digital em porta amadeirada", note: "Referência visual · modelo a confirmar" },
+  { image: "/media/fechadura-intelbras-fr101.webp", title: "Detalhe de fechadura eletrônica", note: "Referência visual · compatibilidade a avaliar" },
 ];

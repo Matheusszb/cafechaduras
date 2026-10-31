@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: { type: "website", locale: "pt_BR", siteName: "CA Instalação de Fechadura", title: "Instalação de Fechaduras | Blumenau, Indaial, Gaspar e Pomerode", description: "Fechaduras digitais e convencionais em Blumenau, Indaial, Gaspar e Pomerode. Solicite uma avaliação.", images: ["/media/fechadura-digital-virtok.jpg"] },
   twitter: { card: "summary_large_image" },
-  icons: { icon: "/media/ca-logo.png" },
+  icons: { icon: "/media/ca-icon.png" },
 };
 
 export default function RootLayout({

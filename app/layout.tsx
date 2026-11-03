@@ -4,6 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: { google: "thcY7qqGe0h_hOPeVs3hBgTrop1hXvSzfY_1IsuzUeM" },
   title: { default: "Instalação de Fechaduras | Blumenau, Indaial, Gaspar e Pomerode", template: "%s | CA Instalação de Fechadura" },
   description: "Instalação de fechaduras digitais e convencionais em Blumenau, Indaial, Gaspar e Pomerode, SC. Solicite uma avaliação pelo WhatsApp.",
   alternates: { canonical: "/" },

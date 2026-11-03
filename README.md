@@ -1,29 +1,27 @@
-# CA Instalação de Fechadura — versão para Vercel
+# CA Fechaduras Digitais — versão para Vercel
 
-Esta pasta é um projeto Next.js pronto para publicação na Vercel. O site é estático: não precisa de painel administrativo, banco de dados, API ou serviço de upload. A logo, seis fotos e três vídeos estão em `public/media`.
+Site Next.js com exportação estática para a CA Fechaduras Digitais. O domínio canônico é `https://www.cainstalacaodefechaduras.com.br`, conforme as URLs já publicadas no sitemap. O formulário de contato prepara uma mensagem para o WhatsApp; o site não armazena as respostas.
 
-As imagens exibidas usam versões WebP menores. As fotos JPEG originais permanecem na pasta para referência e prévias de compartilhamento. O logo exibido foi reduzido de 891 KB para 39 KB, as fontes WOFF2 são servidas pelo próprio site e os vídeos da galeria só começam a carregar quando o visitante os abre. O vídeo principal continua em destaque na primeira tela.
+## Desenvolvimento
 
-## Publicar
-
-1. Envie **o conteúdo desta pasta** para um repositório Git e importe-o em **Vercel → Add New → Project**. Se o repositório contiver a pasta `ca-vercel` junto com outros arquivos, escolha `ca-vercel` em **Root Directory**.
-2. Confirme **Framework Preset: Next.js**. Deixe os comandos de instalação, build e saída na detecção automática. O projeto fixa pnpm 10 no `package.json`; `next build` gera a exportação estática em `out/`.
-3. Depois de definir o domínio final, configure `NEXT_PUBLIC_SITE_URL` com a URL completa, por exemplo `https://seu-dominio.com.br`, e faça um novo deploy. Isso atualiza URLs canônicas, sitemap, robots e dados estruturados. Se as variáveis de sistema da Vercel estiverem expostas, o site usa `VERCEL_PROJECT_PRODUCTION_URL` automaticamente enquanto essa variável não estiver definida.
-
-Não configure banco de dados nem variáveis de administração. O formulário em `/contato` apenas monta uma mensagem para o WhatsApp da empresa.
-
-## Testar localmente
+Requer Node.js 22.13 ou superior e pnpm 10.
 
 ```sh
 pnpm install
 pnpm build
-pnpm dev
 ```
 
-O build foi verificado com Next.js 16.3.4 e gera todas as páginas, `robots.txt`, `sitemap.xml` e os arquivos de mídia. Para atualizar conteúdo, altere os arquivos em `app/`, `components/` ou `public/media` e publique novamente.
+O build gera o site em `out/`, incluindo `robots.txt`, `sitemap.xml` e uma página 404. Para publicar na Vercel, importe este diretório como projeto Next.js e associe o domínio canônico. Configure um redirecionamento permanente 301 de `cainstalacaodefechaduras.com.br` para a versão com `www` no painel de domínios.
 
-## Área de atendimento e SEO local
+## Conteúdo e SEO local
 
-O site informa atendimento em Blumenau, Indaial, Gaspar e Pomerode, SC. A página inicial e as páginas de serviço publicam essas cidades em texto visível e nos dados estruturados `Locksmith` e `Service`. O mapa aponta para o único cadastro Google da empresa em Blumenau; o site não declara filiais nas outras cidades.
+O conteúdo público declara atendimento em Blumenau, SC, com Badenfurt como bairro de referência. Outros municípios, endereço completo, horários, preços e perfil oficial do Google só devem ser adicionados após confirmação da empresa.
 
-Depois de publicar, confira se o Perfil da Empresa no Google também lista essas quatro cidades como áreas atendidas. Configure `NEXT_PUBLIC_SITE_URL` com o domínio definitivo para que URLs canônicas, Open Graph, `sitemap.xml` e `robots.txt` usem o endereço certo. Cadastre o domínio e envie o sitemap no Google Search Console.
+O sitemap inclui as sete páginas públicas. Após o deploy:
+
+1. Abra `https://www.cainstalacaodefechaduras.com.br/robots.txt` e `https://www.cainstalacaodefechaduras.com.br/sitemap.xml` e confirme resposta HTTP 200.
+2. No Google Search Console, confira a propriedade do domínio e o sitemap `https://www.cainstalacaodefechaduras.com.br/sitemap.xml`. Se ele já estiver cadastrado, não é necessário cadastrá-lo de novo.
+3. Confira a cobertura e a inspeção das URLs principais no Search Console. A verificação do Google já está no layout e o arquivo de verificação existente foi preservado.
+4. Confirme nome, telefone, área de atendimento e URL do site no Perfil da Empresa no Google antes de publicar um link para ele.
+
+Os arquivos WebP são usados nas páginas. Os JPEG originais permanecem como referência e a imagem de compartilhamento usa uma dessas fotos. Os vídeos da galeria usam `preload="none"`; o vídeo principal mantém reprodução automática com poster.

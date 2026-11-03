@@ -12,7 +12,7 @@ export function ContactForm() {
       setError("Preencha nome, WhatsApp e cidade.");
       return;
     }
-    const message = `Olá! Gostaria de solicitar um orçamento à CA Instalação de Fechadura.\n\nNome: ${values.nome}\nWhatsApp: ${values.whatsapp}\nCidade: ${values.cidade}\nBairro: ${values.bairro || "Não informado"}\nTipo de fechadura: ${values.tipo || "A definir"}\nServiço: ${values.servico || "Gostaria de orientação"}`;
+    const message = `Olá! Gostaria de solicitar um orçamento à CA Fechaduras Digitais em Blumenau.\n\nNome: ${values.nome}\nWhatsApp: ${values.whatsapp}\nCidade: ${values.cidade}\nBairro: ${values.bairro || "Não informado"}\nTipo de fechadura: ${values.tipo || "A definir"}\nServiço: ${values.servico || "Gostaria de orientação"}`;
     window.open(quoteLink(message), "_blank", "noopener,noreferrer");
     setError("");
   }
